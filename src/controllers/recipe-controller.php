@@ -35,6 +35,8 @@ function showRecipe(int $id): void
 
 function addRecipe(): void
 {
+    $errors = [];
+
     if ($_SERVER["REQUEST_METHOD"] === 'POST') {
         $recipe = array_map('trim', $_POST);
 
